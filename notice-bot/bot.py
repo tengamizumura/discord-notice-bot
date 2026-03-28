@@ -1,4 +1,5 @@
 import discord
+from keep_alive import keep_alive
 
 # メッセージの中身を読み取るための権限（Intents）を設定
 intents = discord.Intents.default()
@@ -30,5 +31,6 @@ async def on_message(message):
         await user.send(f'【サークル通知】{message.author.name}さんから連絡です！\n内容: {message.content}')
         
 #Botを起動す
+keep_alive()
 client.run('MTQ4NjU0ODQzNzYwMzMyMzk1NQ.G9olp4.R-xSkumCoNRRJsiegFbyp7IZ2MY9XUCJ2sm9zI')
 
